@@ -15,7 +15,6 @@ public class SlecionarObjeto : MonoBehaviour
             
             RaycastHit hit, hitPlayer;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Ray rayPlayer = new Ray(transform.position, transform.forward);
               
 
             if (Physics.Raycast(ray, out hit, MaxDistance, mask))
@@ -24,11 +23,20 @@ public class SlecionarObjeto : MonoBehaviour
                 {
                     if (Physics.Raycast(transform.position, (hit.point - transform.position).normalized, out hitPlayer, MaxDistance, mask))
                     {
-                        if (hitPlayer.distance <= 0.8f)
+                        if (hitPlayer.distance <= 0.8f && hitPlayer.transform.gameObject.CompareTag("Torneira"))
                         {
                             GameObject go = hitPlayer.transform.gameObject;
                             FluxoDeAgua fluxo = go.GetComponent<FluxoDeAgua>();
                             fluxo.turnWaterOn();
+                        }
+                        else
+                        {
+                            if (hitPlayer.distance <= 1.5f && hitPlayer.transform.gameObject.CompareTag("Manjedoura"))
+                            {
+                                GameObject go = hitPlayer.transform.gameObject;
+                                FluxoDeComida fluxo = go.GetComponent<FluxoDeComida>();
+                                fluxo.feedRabbits();
+                            }
                         }
                         print(hitPlayer.distance);
                         print(hit.transform.name);

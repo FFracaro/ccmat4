@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D PlayerBody;
     private Animator Animador;
-    private bool Right = true;
     private SpriteRenderer Renderer;
     private float moveX, moveY;
 
