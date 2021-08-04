@@ -13,13 +13,7 @@ public class SairInfoBtn : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        info.onClick.AddListener(infoOnClick);
         sair.onClick.AddListener(sairOnClick);
-    }
-
-    void infoOnClick()
-    {
-        canvas.enabled = true;
     }
 
     void sairOnClick()

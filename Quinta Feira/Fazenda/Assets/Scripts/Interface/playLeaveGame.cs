@@ -8,6 +8,7 @@ public class playLeaveGame : MonoBehaviour
     public Button play;
     public Button leave;
     public Canvas canvas;
+    public Canvas canvasHistoria;
 
 	// Use this for initialization
 	void Start ()
@@ -19,6 +20,7 @@ public class playLeaveGame : MonoBehaviour
     void jogarOnClick ()
     {
         canvas.enabled = false;
+        canvasHistoria.enabled = true;
     }
 
     void sairOnClick()

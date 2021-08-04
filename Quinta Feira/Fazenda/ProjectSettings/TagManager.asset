@@ -4,11 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Destructible
-  - Enemy
-  - Waypoint
-  - Breadcrumb
   - Animais
+  - Waypoint
+  - Enemy
+  - Breadcrumb
+  - Plantacao
+  - Save
+  - Arvores
   layers:
   - Default
   - TransparentFX
@@ -25,8 +27,8 @@ TagManager:
   - 
   - 
   - 
-  - Ground
-  - PostProcessing
+  - Interagir
+  - 
   - 
   - 
   - 
